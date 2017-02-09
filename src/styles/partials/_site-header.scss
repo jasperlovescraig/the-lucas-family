@@ -1,0 +1,156 @@
+
+.site-header { 
+    text-align: center;
+    padding: 20px 0 20px;
+    border-bottom: 1px solid #dfdfdf;
+    background: #fff;
+    margin-bottom: 50px;
+}
+
+.site-header__h1 {
+    font-family: abril-fatface, serif;
+    font-size: 28px;
+    color: $headerColor1;
+    text-shadow: 3px 5px 15px #f8f8f8;
+    margin: 0
+    transition: all 0.2s ease;    ;    
+}
+
+.site-header__logo {
+    border-bottom: 1px solid #e7e7e7;  
+    padding: 0 0 8px;
+    margin-bottom: 0;
+    
+    @include desktop {
+        padding: 0 15px;
+        border-bottom: none;
+        text-align: center;
+    }
+    
+}
+
+.site-header__nav {
+    
+    li {
+        @include desktop {
+            display: inline-block;
+        }          
+        
+    } 
+    
+}
+
+.site-header__nav-ul {
+    
+    @include desktop {
+        float: left;
+        width: 100%;
+        right: 25px;
+        position: absolute;
+        text-align: center;
+        padding-left: 20px;
+        height: 52px;      
+        
+    }
+    
+}
+
+.site-header__nav-link {
+    font-family: stencil-std,sans-serif;
+    font-size: .8em;
+    line-height: 1em;
+    color: #FFF; 
+    display: block;
+    letter-spacing: 1.5px;
+    padding: 15px;
+    background: grey;
+    border-bottom: 1px solid #fff;
+    text-transform: uppercase; 
+    
+    @include desktop {
+        float: left;
+        background-color: #fff;
+        color: grey;
+        font-size: 1.2em;
+        
+        &:hover {
+            box-shadow: 0 0 5px 0 #ccc;            
+        }
+        
+    }        
+    
+}
+
+
+
+.masthead__logo {
+    @include desktop {
+      position: absolute;
+      left: 50%;
+      top: 20px;
+      transform: translate(-50%, 20px);
+        z-index: 2;
+    }    
+}
+
+.masthead__h1 {
+    font-family: 'Work Sans', sans-serif;
+    font-size: 28px;
+    text-transform: uppercase;       
+    margin-bottom: 3px;
+    @include desktop {
+        color: #fff;
+        font-size: 34px;
+    }
+}
+
+.masthead__h1-est {
+    font-family: 'Work Sans', sans-serif;
+    font-size: 13px;
+    text-transform: none;
+    display: block;
+    text-shadow: 0px;
+}
+
+.masthead__nav {
+    clear: both;
+    border-top: 1px solid #fff;
+    position: relative;
+    z-index: 2;
+
+    li {
+        display: block;
+        background-color: rgba(0, 0, 0, .2);
+        border-bottom: 1px solid #fff;
+    }
+    
+    a{
+        font-family: 'Merriweather', serif;  
+        color: #fff;
+        display: block;
+        padding: 8px 10px;
+        text-align: center;
+        text-decoration: none;
+        font-size: 20px;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        
+    }
+    
+    
+    @include desktop {
+        float: right;
+        width: 300px;
+        border-top: none;
+        
+        li {
+            display: inline-block;
+            background-color: transparent;
+            border: 1px solid #fff;
+            margin-right: 5px;
+        }
+        
+    }    
+
+}
+

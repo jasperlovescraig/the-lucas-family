@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">  
+    <meta charset="utf-8">
+    <title>Home Page</title>
+   
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+       <link rel="stylesheet" href="./dist/styles/children.css" />
+      <script src="https://use.edgefonts.net/mr-bedfort;stencil-std;abril-fatface;droid-sans.js"></script>      
+  </head>
+  <body class="{{page.child_name}}">
+
+
+<div class="page-container child">
+      
+    {% include site-header.html %}
+
+     <section class=" section-hero">
+
+   
+            <figure class="section-hero__container">
+                <div class="hero section-hero__image-container">
+                    <img class="content section-hero__image" src="{{page.hero_image}}" alt="Linda Lindsay had to deal with breast cancer before the shock of primary-progressive MS.">
+                </div>
+                <figcaption class="section-hero__img-credit">
+                    <div class="section-hero__img-caption">
+                        Linda Lindsay had to deal with breast cancer before the shock of primary-progressive MS.
+                    </div>
+                </figcaption>
+         </figure>         
+         
+    
+    </section>
+    
+    
+<section class="posts block-container">
+    
+<ul>
+  {% for post in site.tags.avery limit: 20 %}
+    <li>
+      <a href="{{ post.url }}">{{ post.title }}</a>
+        {{ post.excerpt }}
+    </li>
+  {% endfor %}
+</ul>
+    
+</section>
+    
+    <section class="tags block-container">
+    
+{% for tag in site.tags %}
+  {% assign t = tag | first %}
+  {% assign posts = tag | last %}
+
+<h2>{{ t | downcase }}</h2>
+<ul>
+{% for post in posts %}
+  {% if post.tags contains t %}
+  <li>
+    <a href="{{ post.url }}">{{ post.title }}</a>
+      <img src="{{post.primary_image}}"
+    <span class="date">{{ post.date | date: "%B %-d, %Y"  }}</span>
+  </li>
+  {% endif %}
+{% endfor %}
+</ul>
+{% endfor %} 
+    
+    </section>
+
+      
+</div>      
+      
+     <footer>
+  <p class="text-center"> © 2017 <a rel="author" href="https://plus.google.com/117558424639811702977" title="Our Google+ Profile">Craig Lucas and Jasper Lucas</a>.  All Rights Reserved.</p>
+    
+    </footer>
+  
+     
+      
+<script
+  src="https://code.jquery.com/jquery-2.2.4.min.js"
+  integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+  crossorigin="anonymous"></script>      
+<script src="bootstrap.js"></script>      
+      
+      <script>
+ var height = $('.hero-slider__img1').height();
+      $('.hero-slider').height(height);
+           
+      
+      </script>
+      
+
+  </body>
+</html>

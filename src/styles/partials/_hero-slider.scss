@@ -1,0 +1,46 @@
+
+.hero-slider {
+    
+    position: relative;
+    z-index: 1;
+
+    @include tablet {
+       
+    }        
+    
+    @include desktop {
+       max-height: 800px
+    }    
+    
+   height: 300px;
+    
+}
+
+
+.hero-slider__images {
+    position: absolute;
+    z-index: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+}
+
+.hero-slider__img {
+    background-size: cover;
+    position: absolute;
+    padding-top: 56.25%;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0;
+}
+
+.hero-slider__img1 {
+    background-image: url(/src/images/xmas/E12.jpg);
+    opacity: 1;
+}
+

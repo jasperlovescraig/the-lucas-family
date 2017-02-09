@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">  
+    <meta charset="utf-8">
+    <title>Home Page</title>
+   
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+       <link rel="stylesheet" href="/dist/styles/home.css" />
+      <script src="https://use.edgefonts.net/mr-bedfort;stencil-std;abril-fatface;droid-sans.js"></script>      
+  </head>
+  <body class="{{page.child_name}}">
+
+
+<div class="page-container child">
+      
+    {% include site-header.html %}
+
+   <section class="post-wrapper block-container">
+      <p class="post-date">{{ page.date }}</p>
+  <h1 class="post-title">Building a blog using Jekyll. Creating custom layouts</h1>
+    
+    <img src="{{page.primary_image}}" />
+    <article class="post-content">
+      {{content}}
+    </article>  
+    
+    </section>
+  
+
+      
+</div>      
+      
+     <footer>
+  <p class="text-center"> © 2017 <a rel="author" href="https://plus.google.com/117558424639811702977" title="Our Google+ Profile">Craig Lucas and Jasper Lucas</a>.  All Rights Reserved.</p>
+    
+    </footer>
+  
+     
+      
+<script
+  src="https://code.jquery.com/jquery-2.2.4.min.js"
+  integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+  crossorigin="anonymous"></script>      
+<script src="bootstrap.js"></script>      
+      
+      <script>
+ var height = $('.hero-slider__img1').height();
+      $('.hero-slider').height(height);
+           
+      
+      </script>
+      
+
+  </body>
+</html>

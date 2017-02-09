@@ -1,0 +1,9 @@
+---
+layout: default
+hero_text: The Lucas Family
+category: Avery
+tags: [milestones]
+primary_image: /src/images/love-521.jpg
+---
+
+<h1>Avery test milestone post 1</h1>

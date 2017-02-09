@@ -1,0 +1,20 @@
+@import "base/reset";
+@import "base/vars/colors";
+@import "base/vars/breakpoints";
+@import "partials/container";
+@import "partials/site-header";
+@import "partials/section";
+
+
+body {
+    border-top: 10px solid #3f4141;
+    background: #f8f8f8;
+}
+    
+    .babyblue {
+        color: $babyBlue;
+    }
+    
+.babypink {
+    color: $babyPink;
+}
